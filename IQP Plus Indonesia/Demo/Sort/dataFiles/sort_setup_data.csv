@@ -1,0 +1,5 @@
+Scenario, url, user-name, password, value
+Sort1, https://www.saucedemo.com/, standard_user, secret_sauce, hilo
+Sort2, https://www.saucedemo.com/, standard_user, secret_sauce, za
+Sort3, https://www.saucedemo.com/, standard_user, secret_sauce, az
+Sort4, https://www.saucedemo.com/, standard_user, secret_sauce, lohi

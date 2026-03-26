@@ -1,0 +1,2 @@
+Scenario, url, user-name, password, first-name, last-name, postal-code
+Checkout1, https://www.saucedemo.com/, standard_user, secret_sauce, John, Doe, 12345

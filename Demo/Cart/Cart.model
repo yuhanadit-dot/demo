@@ -10,7 +10,7 @@
         <model-identification-field name="Created By" partOfTag="false" value="yuhananda.aditama"/>
         <model-identification-field name="Created Date and Time" partOfTag="false" value="26 Mar 2026 05:32:38"/>
         <model-identification-field name="Updated By" partOfTag="false" value="yuhananda.aditama"/>
-        <model-identification-field name="Updated Date and Time" partOfTag="false" value="26 Mar 2026 05:58:51"/>
+        <model-identification-field name="Updated Date and Time" partOfTag="false" value="26 Mar 2026 05:59:32"/>
         <model-identification-field name="Application Sub Function" partOfTag="true" value="Cart"/>
         <model-identification-field name="Test Stage" partOfTag="false" value=""/>
         <model-identification-field name="Criticality" partOfTag="false" value=""/>
@@ -53,7 +53,9 @@
     <defaultParentDetails parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername=""/>
     <deactivates/>
     <attrs-to-delete/>
-    <pool_comments/>
+    <pool_comments>
+        <pool_comment key="49058579-aa85-4879-8d32-e3399cf19acd" value="{&quot;name&quot;:&quot;quantity&quot;,&quot;version&quot;:&quot;2&quot;}"/>
+    </pool_comments>
     <db-dependencies/>
     <focus-ctd-model-sync>
         <focus-ctd-model-sync-mult/>

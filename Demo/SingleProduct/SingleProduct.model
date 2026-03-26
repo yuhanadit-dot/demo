@@ -10,7 +10,7 @@
         <model-identification-field name="Created By" partOfTag="false" value="yuhananda.aditama"/>
         <model-identification-field name="Created Date and Time" partOfTag="false" value="26 Mar 2026 05:32:38"/>
         <model-identification-field name="Updated By" partOfTag="false" value="yuhananda.aditama"/>
-        <model-identification-field name="Updated Date and Time" partOfTag="false" value="26 Mar 2026 05:33:32"/>
+        <model-identification-field name="Updated Date and Time" partOfTag="false" value="26 Mar 2026 05:35:36"/>
         <model-identification-field name="Application Sub Function" partOfTag="true" value="Cart"/>
         <model-identification-field name="Test Stage" partOfTag="false" value=""/>
         <model-identification-field name="Criticality" partOfTag="false" value=""/>
@@ -20,13 +20,15 @@
         <model-identification-field name="User Story" partOfTag="false" value=""/>
         <model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
     </model-identification>
-    <attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="product" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Demo @1.0 @Demo_Cart @Cart" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-        <value name="product_name" neg-value="false" weight="1"/>
+    <attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="quantity" parentDetailsApplicationName="Demo" parentDetailsFunctionality="Cart" parentDetailsModel="SingleProduct.model" parentDetailsModelTag="@Demo @1.0 @Demo_Cart @Cart" parentDetailsPortfolio="DemoPortofolio" parentDetailsTenantId="IQP Plus Indonesia" parentDetailsUsername="yuhananda.aditama" poolId="" revision="" type="STRING">
+        <value name="single" neg-value="false" weight="1"/>
+        <value name="multiple" neg-value="false" weight="1"/>
+        <value name="empty" neg-value="false" weight="1"/>
     </attribute>
     <coverage-reqs-sets defaultCoverageRequirementsSet="Coverage Requirement 1">
         <coverage-reqs-set description="" name="Coverage Requirement 1">
             <coverage-req>
-                <attribute name="product"/>
+                <attribute name="quantity"/>
                 <coverage-goal coverage-goal-val="1"/>
             </coverage-req>
         </coverage-reqs-set>
@@ -41,7 +43,9 @@
     <defaultParentDetails parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername=""/>
     <deactivates/>
     <attrs-to-delete/>
-    <pool_comments/>
+    <pool_comments>
+        <pool_comment key="6290f7e1-0aea-4898-b529-a1965bc15ed5" value="{&quot;name&quot;:&quot;product&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+    </pool_comments>
     <db-dependencies/>
     <focus-ctd-model-sync>
         <focus-ctd-model-sync-mult/>

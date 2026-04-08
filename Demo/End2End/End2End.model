@@ -10,7 +10,7 @@
         <model-identification-field name="Created By" partOfTag="false" value="yuhananda.aditama"/>
         <model-identification-field name="Created Date and Time" partOfTag="false" value="26 Mar 2026 05:39:26"/>
         <model-identification-field name="Updated By" partOfTag="false" value="yuhananda.aditama"/>
-        <model-identification-field name="Updated Date and Time" partOfTag="false" value="26 Mar 2026 05:40:08"/>
+        <model-identification-field name="Updated Date and Time" partOfTag="false" value="26 Mar 2026 06:40:51"/>
         <model-identification-field name="Application Sub Function" partOfTag="true" value="End2End"/>
         <model-identification-field name="Test Stage" partOfTag="false" value=""/>
         <model-identification-field name="Criticality" partOfTag="false" value=""/>
@@ -34,14 +34,147 @@
     <neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
         <coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet"/>
     </neg-coverage-reqs-sets>
+    <focus-ctd-decoration decorationName="Web" decorationType="cucumberDecoration" isActiveDecoration="true">
+        <focus-ctd-trigger appliance="FIRST_TEST" is_or="false" name="end2end" negative="false" suppressNewLine="false" triggerType="Feature">
+            <focus-ctd-single-template>
+                <focus-ctd-template text="end2end"/>
+            </focus-ctd-single-template>
+        </focus-ctd-trigger>
+        <focus-ctd-trigger appliance="ALWAYS" is_or="false" name="scenario" negative="false" suppressNewLine="false" triggerType="Scenario">
+            <focus-ctd-single-template>
+                <focus-ctd-template text="Test End to End with &lt;att_name = flow&gt; flow"/>
+            </focus-ctd-single-template>
+        </focus-ctd-trigger>
+        <focus-ctd-trigger appliance="ALWAYS" is_or="false" name="step_1" negative="false" suppressNewLine="false" triggerType="Steps">
+            <focus-ctd-cucumber-steps-template>
+                <cucumber-step actionName="navigateTo" additionalInfo="" category="NavigationalCategory" stepType="Given">
+                    <focus-ctd-template text="I navigate to &quot;(url)&quot;"/>
+                    <actionParameter data="&quot;(url)&quot;" dataSource="ExternalData"/>
+                    <externalData value="https://www.saucedemo.com/"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="populateTextField" additionalInfo="elementId:user-name~CTD~elementName:user-name~CTD~xpath:.//div[@id='login_button_container']/div[1]/form[1]/div[1]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]~CTD~css:#user-name" category="InputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I enter into input field &quot;[user-name]&quot; the value &quot;(user-name)&quot;"/>
+                    <actionParameter data="&quot;[user-name]&quot;" dataSource="UIControl"/>
+                    <actionParameter data="&quot;(user-name)&quot;" dataSource="ExternalData"/>
+                    <externalData value="standard_user"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="populateTextField" additionalInfo="elementId:password~CTD~elementName:password~CTD~xpath:.//div[@id='login_button_container']/div[1]/form[1]/div[2]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[2]/input[1]~CTD~css:#password" category="InputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I enter into input field &quot;[password]&quot; the value &quot;(password)&quot;"/>
+                    <actionParameter data="&quot;[password]&quot;" dataSource="UIControl"/>
+                    <actionParameter data="&quot;(password)&quot;" dataSource="ExternalData"/>
+                    <externalData value="***"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="elementId:login-button~CTD~elementName:login-button~CTD~xpath:.//div[@id='login_button_container']/div[1]/form[1]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/input[1]~CTD~css:#login-button" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[login-button]&quot; link"/>
+                    <actionParameter data="&quot;[login-button]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="elementId:add-to-cart-sauce-labs-backpack~CTD~elementName:add-to-cart-sauce-labs-backpack~CTD~xpath:.//div[@id='inventory_container']/div[1]/div[1]/div[2]/div[2]/button[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]~CTD~dxpath:.//button[contains(text(),'Add to cart')]~CTD~css:#add-to-cart-sauce-labs-backpack" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[add-to-cart-sauce-labs-backpack]&quot; link"/>
+                    <actionParameter data="&quot;[add-to-cart-sauce-labs-backpack]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="elementId:add-to-cart-sauce-labs-bike-light~CTD~elementName:add-to-cart-sauce-labs-bike-light~CTD~xpath:.//div[@id='inventory_container']/div[1]/div[2]/div[2]/div[2]/button[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]~CTD~dxpath:.//button[contains(text(),'Add to cart')]~CTD~css:#add-to-cart-sauce-labs-bike-light" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[add-to-cart-sauce-labs-bike-light]&quot; link"/>
+                    <actionParameter data="&quot;[add-to-cart-sauce-labs-bike-light]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="xpath:.//div[@id='shopping_cart_container']/a[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/a[1]~CTD~css:.shopping_cart_link" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[2]&quot; link"/>
+                    <actionParameter data="&quot;[2]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="elementId:checkout~CTD~elementName:checkout~CTD~xpath:.//div[@id='cart_contents_container']/div[1]/div[2]/button[2]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]~CTD~dxpath:.//button[contains(text(),'Checkout')]~CTD~css:#checkout" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[checkout]&quot; link"/>
+                    <actionParameter data="&quot;[checkout]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="populateTextField" additionalInfo="elementId:first-name~CTD~elementName:firstName~CTD~xpath:.//div[@id='checkout_info_container']/div[1]/form[1]/div[1]/div[1]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/input[1]~CTD~css:#first-name" category="InputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I enter into input field &quot;[first-name]&quot; the value &quot;(first-name)&quot;"/>
+                    <actionParameter data="&quot;[first-name]&quot;" dataSource="UIControl"/>
+                    <actionParameter data="&quot;(first-name)&quot;" dataSource="ExternalData"/>
+                    <externalData value="John"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="populateTextField" additionalInfo="elementId:last-name~CTD~elementName:lastName~CTD~xpath:.//div[@id='checkout_info_container']/div[1]/form[1]/div[1]/div[2]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/input[1]~CTD~css:#last-name" category="InputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I enter into input field &quot;[last-name]&quot; the value &quot;(last-name)&quot;"/>
+                    <actionParameter data="&quot;[last-name]&quot;" dataSource="UIControl"/>
+                    <actionParameter data="&quot;(last-name)&quot;" dataSource="ExternalData"/>
+                    <externalData value="Doe"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="populateTextField" additionalInfo="elementId:postal-code~CTD~elementName:postalCode~CTD~xpath:.//div[@id='checkout_info_container']/div[1]/form[1]/div[1]/div[3]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[3]/input[1]~CTD~css:#postal-code" category="InputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I enter into input field &quot;[postal-code]&quot; the value &quot;(postal-code)&quot;"/>
+                    <actionParameter data="&quot;[postal-code]&quot;" dataSource="UIControl"/>
+                    <actionParameter data="&quot;(postal-code)&quot;" dataSource="ExternalData"/>
+                    <externalData value="55293"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="elementId:continue~CTD~elementName:continue~CTD~xpath:.//div[@id='checkout_info_container']/div[1]/form[1]/div[2]/input[1]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/input[1]~CTD~css:#continue" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[continue]&quot; link"/>
+                    <actionParameter data="&quot;[continue]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+                <cucumber-step actionName="clickLink" additionalInfo="elementId:finish~CTD~elementName:finish~CTD~xpath:.//div[@id='checkout_summary_container']/div[1]/div[2]/div[9]/button[2]~CTD~axpath:html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[9]/button[2]~CTD~dxpath:.//button[contains(text(),'Finish')]~CTD~css:#finish" category="ElementClickCategory" stepType="And">
+                    <focus-ctd-template text="I click on &quot;[finish]&quot; link"/>
+                    <actionParameter data="&quot;[finish]&quot;" dataSource="UIControl"/>
+                </cucumber-step>
+                <cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+                    <focus-ctd-template text="I add wait seconds of &quot;3&quot;"/>
+                    <actionParameter data="&quot;3&quot;" dataSource="Literal"/>
+                </cucumber-step>
+            </focus-ctd-cucumber-steps-template>
+        </focus-ctd-trigger>
+    </focus-ctd-decoration>
     <focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
-    <focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
+    <focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
     <focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
     <focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
     <defaultParentDetails parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername=""/>
     <deactivates/>
     <attrs-to-delete/>
-    <pool_comments/>
+    <pool_comments>
+        <pool_comment key="2797ae1d-6af8-459c-aca1-fe7617624bde" value="{&quot;name&quot;:&quot;flow&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+    </pool_comments>
     <db-dependencies/>
     <focus-ctd-model-sync>
         <focus-ctd-model-sync-mult/>

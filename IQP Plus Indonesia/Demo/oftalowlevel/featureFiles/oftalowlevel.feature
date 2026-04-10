@@ -2,7 +2,7 @@
 Feature: oftalowlevel
 @oftalowlevel1
 Scenario: User registration and login functionality with valid email and password
-Given I navigate to "https://www.saucedemo.com/"
+Given I navigate to "https://www.saucedemo.com/inventory.html"
 #Opens the application URL and logs in with valid credentials
 And I group steps into function as "openApplicationUrl_new"
 And I open new window with "https://www.saucedemo.com/"
